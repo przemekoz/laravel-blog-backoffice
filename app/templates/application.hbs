@@ -1,0 +1,18 @@
+<nav class="navbar navbar-light">
+  <a class="navbar-brand" href="#">Laravel Blog Backoffice</a>
+</nav>
+<div class="jumbo">
+  Laravel Blog Backoffice
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <ul class="nav flex-column">
+        <li class="nav-item"><i class="fa fas fa-file"></i><LinkTo @route="elements">Elements</LinkTo></li>
+      </ul>
+    </div>
+    <div class="col-9">
+      {{outlet}}
+    </div>
+  </div>
+</div>

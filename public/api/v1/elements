@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "total": 101,
+    "totalPages": 13,
+    "currentPage": 3,
+    "size": 20
+  },
+  "data": [
+    {
+      "type": "elements",
+      "id": 24,
+      "attributes": {
+        "active": true,
+        "image": "http://placehold.it/100x100",
+        "title": "qui anim dolore eiusmod dolore",
+        "description": "Eiusmod id labore tempor adipisicing laborum eu esse nisi non id commodo. Nostrud et qui excepteur reprehenderit laboris aliqua dolor ad fugiat eiusmod occaecat. Incididunt do adipisicing voluptate pariatur.",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      },
+      "relationships": {
+        "tags": {
+          "data": [{"id": 27, "type": "tags"}, {"id": 23, "type": "tags"}, {"id": 26, "type": "tags"}]
+        }
+      }
+    },
+    {
+      "type": "elements",
+      "id": 30,
+      "attributes": {
+        "active": false,
+        "image": "http://placehold.it/100x100",
+        "title": "culpa elit cupidatat dolore est",
+        "description": "Velit non amet sit ex elit et ut consequat velit. Dolor cupidatat amet reprehenderit incididunt ipsum commodo proident id voluptate enim sunt. Velit consequat anim ea quis sint ipsum eu amet proident commodo incididunt.",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    },
+    {
+      "type": "elements",
+      "id": 28,
+      "attributes": {
+        "active": true,
+        "image": "http://placehold.it/100x100",
+        "title": "magna officia commodo mollit exercitation",
+        "description": "Sint officia in deserunt consequat adipisicing ad irure. Non elit ea et exercitation dolore fugiat nulla adipisicing anim. Dolore adipisicing id consequat occaecat.",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    },
+    {
+      "type": "elements",
+      "id": 10,
+      "attributes": {
+        "active": true,
+        "image": "http://placehold.it/100x100",
+        "title": "laboris ex aliquip consectetur id",
+        "description": "Laborum nulla ad ipsum aliqua elit. Laborum elit mollit irure proident duis fugiat sint eu ut excepteur qui. Est Lorem reprehenderit et sint aliqua cupidatat adipisicing commodo.",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    },
+    {
+      "type": "elements",
+      "id": 10,
+      "attributes": {
+        "active": false,
+        "image": "http://placehold.it/100x100",
+        "title": "ullamco consectetur est irure mollit",
+        "description": "Ex nostrud tempor excepteur est. Esse proident cupidatat est pariatur ad commodo nulla commodo veniam nostrud. Nulla enim est minim Lorem.",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    },
+    {
+      "type": "elements",
+      "id": 18,
+      "attributes": {
+        "active": true,
+        "image": "http://placehold.it/100x100",
+        "title": "esse sunt culpa enim deserunt",
+        "description": "Consectetur in sit sint sint officia proident. Ipsum non commodo proident dolor sit nostrud amet. Id est dolor cillum ut enim veniam Lorem duis consectetur qui ad velit aute.",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    },
+    {
+      "type": "elements",
+      "id": 29,
+      "attributes": {
+        "active": true,
+        "image": "http://placehold.it/100x100",
+        "title": "magna est officia enim ea",
+        "description": "Enim enim laboris ea aute fugiat officia deserunt Lorem dolor aute sunt reprehenderit. Minim incididunt irure nulla consectetur. Nostrud consectetur ut minim exercitation pariatur deserunt consequat.",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    },
+    {
+      "type": "elements",
+      "id": 21,
+      "attributes": {
+        "active": false,
+        "image": "http://placehold.it/100x100",
+        "title": "dolor eu sint et cillum",
+        "description": "Magna ex ipsum reprehenderit nulla labore est exercitation. Elit dolor anim nisi ut est voluptate dolor minim. Fugiat sint est velit magna qui.",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    },
+    {
+      "type": "elements",
+      "id": 15,
+      "attributes": {
+        "active": true,
+        "image": "http://placehold.it/100x100",
+        "title": "aute exercitation nisi labore incididunt",
+        "description": "Quis enim in magna aute. Qui consectetur deserunt cupidatat exercitation ea exercitation sit consectetur commodo veniam et cillum sit irure. Enim duis culpa eu ad sit.",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    },
+    {
+      "type": "elements",
+      "id": 10,
+      "attributes": {
+        "active": true,
+        "image": "http://placehold.it/100x100",
+        "title": "pariatur irure et dolore eiusmod",
+        "description": "Dolor veniam enim velit ex ex deserunt deserunt ipsum excepteur adipisicing reprehenderit minim qui. Cupidatat ad labore ipsum duis veniam fugiat magna exercitation proident est ut ullamco sit. Do non quis do sunt eu dolor excepteur incididunt fugiat eiusmod magna ea.",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "tags",
+      "id": 27,
+      "attributes": {
+        "title": "labore",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    },
+    {
+      "type": "tags",
+      "id": 23,
+      "attributes": {
+        "title": "eiusmod",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    },
+    {
+      "type": "tags",
+      "id": 26,
+      "attributes": {
+        "title": "qui",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    }
+  ]
+}

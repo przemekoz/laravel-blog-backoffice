@@ -1,0 +1,5 @@
+<TagsList @model={{@listOfTags}} @onRemoveTag={{@onRemoveTag}} />
+
+<InputAutocomplete @cssId="tags-managment-tags" @getModel="tag" @onPick={{@onPickTag}} @phrase={{this.autocompleteValue}} @onPhraseUpdate={{onPhraseUpdate}} />
+
+<button {{on 'click' (fn @onAddTag this.autocompleteValue)}}>Add new tag</button>

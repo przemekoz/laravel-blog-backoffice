@@ -1,0 +1,26 @@
+<WrapperEdit @title="Element Edit" @routeBack="elements" @submitAction={{this.submit}}>
+
+  {{#with @model.data as |element|}}
+
+    <div class="form-group">
+      <label for="title">Title</label>
+      <Input id="title" class="form-control" @type="text" @value={{element.title}} size="50" disabled={{this.entryNotAllowed}} />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <Textarea id="description" class="form-control" @value={{element.description}} cols="80" rows="6" disabled={{this.entryNotAllowed}} />
+    </div>
+
+    <div class="form-group">
+      <label for="tags">Tags</label>
+      <TagsManagment
+        @listOfTags={{this.listOfTags}}
+        @onPickTag={{this.onPickTag}}
+        @onAddTag={{this.onAddTag}}
+        @onRemoveTag={{this.onRemoveTag}} />
+    </div>
+
+  {{/with}}
+
+</WrapperEdit>

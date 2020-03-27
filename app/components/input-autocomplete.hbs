@@ -1,0 +1,18 @@
+<div class="form-group" style="padding: 1em; border: 1px solid grey; position: relative">
+  <button {{on 'click' this.hide}}>hide</button>
+
+  <div class="dropdown">
+
+    <Input @type="text" @value={{this.phrase}} @key-up={{fn this.keyUp}} id="autocomplete-input-{{@cssId}}" />
+
+    <div class="autocomplete-dropdown-{{@cssId}}">
+      <div class="dropdown-menu" aria-labelledby="autocomplete-input-{{@cssId}}">
+        {{#each this.options as |option index|}}
+          <span class="dropdown-item" style="cursor: pointer" {{on 'click' this.hide}} {{on 'click' (fn @onPick option)}}>{{option.title}} (id: {{option.id}})</span>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,32 @@
+<WrapperDetail @title="Element details" @routeBack="elements">
+
+  {{#with @model.data as |element|}}
+
+    <div class="form-group">
+      <label>Title</label>
+      <div class="form-text text-muted">Title</div>
+      <div class="form-text">{{element.title}}</div>
+    </div>
+
+    <div class="form-group">
+      <div class="form-text text-muted">Description</div>
+      <div class="form-text">{{element.description}}</div>
+    </div>
+
+    <div class="form-group">
+      <div class="form-text text-muted">Active</div>
+      <div class="form-text"><InfoYesNo @value={{element.active}} /></div>
+    </div>
+
+    <div class="form-group">
+      <div class="form-text text-muted">Tags</div>
+      <TagsList @model={{element.tags}} />
+    </div>
+
+    <div class="form-group">
+      <p><img src={{element.image}} alt="element" /></p>
+    </div>
+
+  {{/with}}
+
+</WrapperDetail>

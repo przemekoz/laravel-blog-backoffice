@@ -1,0 +1,49 @@
+{
+  "data":
+    {
+      "type": "elements",
+      "id": 24,
+      "attributes": {
+        "active": true,
+        "image": "http://placehold.it/100x100",
+        "title": "qui anim dolore eiusmod dolore",
+        "description": "Eiusmod id labore tempor adipisicing laborum eu esse nisi non id commodo. Nostrud et qui excepteur reprehenderit laboris aliqua dolor ad fugiat eiusmod occaecat. Incididunt do adipisicing voluptate pariatur.",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      },
+      "relationships": {
+        "tag": {
+          "data": [{"id": 27, "type": "tags"}, {"id": 23, "type": "tags"}, {"id": 26, "type": "tags"}]
+        }
+      }
+    },
+  "included": [
+    {
+      "type": "tags",
+      "id": 27,
+      "attributes": {
+        "title": "labore",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    },
+    {
+      "type": "tags",
+      "id": 23,
+      "attributes": {
+        "title": "eiusmod",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    },
+    {
+      "type": "tags",
+      "id": 26,
+      "attributes": {
+        "title": "qui",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    }
+  ]
+}

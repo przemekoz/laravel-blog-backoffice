@@ -1,0 +1,68 @@
+{
+  "meta": {},
+  "data": [
+    {
+      "type": "tags",
+      "id": 27,
+      "attributes": {
+        "title": "labore",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    },
+    {
+      "type": "tags",
+      "id": 23,
+      "attributes": {
+        "title": "eiusmod",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    },
+    {
+      "type": "tags",
+      "id": 26,
+      "attributes": {
+        "title": "qui",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    },
+    {
+      "type": "tags",
+      "id": 24,
+      "attributes": {
+        "title": "veniam",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    },
+    {
+      "type": "tags",
+      "id": 15,
+      "attributes": {
+        "title": "sunt",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    },
+    {
+      "type": "tags",
+      "id": 17,
+      "attributes": {
+        "title": "dolor",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    },
+    {
+      "type": "tags",
+      "id": 27,
+      "attributes": {
+        "title": "in",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    }
+  ]
+}

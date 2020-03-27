@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "totalPages": 13
+  },
+  "data": [
+    '{{repeat(10)}}',
+    {
+      "type": "elements",
+      "id": "{{integer(10,30)}}",
+      "attributes": {
+        "active": '{{bool()}}',
+        "image": 'http://placehold.it/100x100',
+        "title": '{{lorem(5, "words")}}',
+        "description": '{{lorem(3, "sentences")}}',
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    }
+  ]
+}
