@@ -3,7 +3,7 @@
 
   <div class="dropdown">
 
-    <Input @type="text" @value={{this.phrase}} @key-up={{fn this.keyUp}} id="autocomplete-input-{{@cssId}}" />
+    <Input @type="text" @value={{this.phrase}} @key-up={{action this.keyUp}} id="autocomplete-input-{{@cssId}}" />
 
     <div class="autocomplete-dropdown-{{@cssId}}">
       <div class="dropdown-menu" aria-labelledby="autocomplete-input-{{@cssId}}">

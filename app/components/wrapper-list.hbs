@@ -3,14 +3,16 @@
 
 <h2>{{@title}}</h2>
 
-
 {{yield}}
 
-
-All: {{@meta.total}} | Page: <strong>{{@meta.currentPage}}</strong>/{{@meta.totalPages}} | Size:
-
-<InputSelect @value={{@meta.size}} @options={{this.pageOptions}} @onChange={{this.handleSizeChange}} />
-
-<p>size: {{@meta.size}}</p>
-
 <hr />
+
+<Pagination
+  @size={{@meta.size}}
+  @total={{@meta.total}}
+  @currentPage={{@meta.currentPage}}
+  @totalPages={{@meta.totalPages}}
+  @onChangePage={{@onChangePage}}
+  @onChangeSize={{@onChangeSize}}
+  @sizeOptions={{this.sizeOptions}}
+/>

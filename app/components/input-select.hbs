@@ -1,4 +1,4 @@
-<select class="form-control form-control-sm" {{on "change" @onChange}}>
+<select class="form-control form-control-sm" {{on "change" this.handleChange}}>
 
   {{#each @options as |item|}}
     {{#if (equal @value item.value)}}

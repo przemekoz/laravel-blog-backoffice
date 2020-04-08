@@ -1,9 +1,8 @@
 import Component from '@glimmer/component';
-import { action } from "@ember/object";
 
 export default class WrapperListComponent extends Component {
 
-  pageOptions = [
+  sizeOptions = [
     {
       label: '10',
       value: 10,
@@ -15,15 +14,6 @@ export default class WrapperListComponent extends Component {
     {
       label: '50',
       value: 50,
-    },
-  ]
-
-  constructor() {
-    super(...arguments);
-  }
-
-  @action
-  handleSizeChange(event) {
-    console.log(event.target.value)
-  }
+    }
+  ];
 }

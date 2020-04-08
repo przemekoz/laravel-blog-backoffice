@@ -1,0 +1,65 @@
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+
+    {{#if isPrevDisabled}}
+    <li class="page-item disabled">
+      <button class="page-link" aria-label="First" disabled="disabled">
+        <span aria-hidden="true">&laquo;</span>
+      </button>
+    </li>
+    {{else}}
+    <li class="page-item">
+      <button class="page-link" aria-label="First" {{on 'click' (action this.handleChangePage 'first')}}>
+        <span aria-hidden="true">&laquo;</span>
+      </button>
+    </li>
+    {{/if}}
+
+    {{#if isPrevDisabled}}
+    <li class="page-item disabled">
+      <button class="page-link" aria-label="Previous" disabled="disabled">
+        <span aria-hidden="true">&lsaquo;</span>
+      </button>
+    </li>
+    {{else}}
+    <li class="page-item">
+      <button class="page-link" aria-label="Previous" {{on 'click' (action this.handleChangePage 'prev')}}>
+        <span aria-hidden="true">&lsaquo;</span>
+      </button>
+    </li>
+    {{/if}}
+
+    {{#if isNextDisabled}}
+    <li class="page-item disabled">
+      <button class="page-link" aria-label="Next" disabled="disabled">
+        <span aria-hidden="true">&rsaquo;</span>
+      </button>
+    </li>
+    {{else}}
+    <li class="page-item">
+      <button class="page-link" aria-label="Next" {{on 'click' (action this.handleChangePage 'next')}}>
+        <span aria-hidden="true">&rsaquo;</span>
+      </button>
+    </li>
+    {{/if}}
+
+    {{#if isNextDisabled}}
+      <li class="page-item disabled">
+        <button class="page-link" aria-label="Last" disabled="disabled">
+          <span aria-hidden="true">&raquo;</span>
+        </button>
+      </li>
+    {{else}}
+      <li class="page-item">
+        <button class="page-link" aria-label="Last" {{on 'click' (action this.handleChangePage 'last')}}>
+          <span aria-hidden="true">&raquo;</span>
+        </button>
+      </li>
+    {{/if}}
+
+  </ul>
+</nav>
+
+
+All: {{@total}} | Page: <strong>{{@currentPage}}</strong>/{{@totalPages}} | Size:
+<InputSelect @value={{this.size}} @options={{@sizeOptions}} @onChange={{action this.handleChangeSize}} />

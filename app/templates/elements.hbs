@@ -1,17 +1,33 @@
 
-<WrapperList @title="List of Elements" @meta={{@model.meta}}>
 
-<ul>
-  {{#each @model.data as |element|}}
-  <li>
-    {{element.title}} (id: {{element.id}})
-    <LinkTo @route="element-details" @model={{element.id}}>Details</LinkTo>
-    <LinkTo @route="element-edit" @model={{element.id}}>Edit</LinkTo>
-    <a href="javascript:void(0)" {{on "click" (fn this.remove element.id)}}>Remove</a>
-  </li>
-  {{/each}}
-</ul>
+<WrapperFilter @onChange={{action handleFilterChange}}>
+  <div style="display: inline">
+    <label for="title">Title</label>
+    <Input id="title" name="title" @value={{this.filter.title}} />
+  </div>
+  <div style="display: inline">
+    <label for="description">Description</label>
+    <Input id="description" name="description" @value={{this.filter.description}} />
+  </div>
+</WrapperFilter>
 
-<Test @content={{"content"}}>Test</Test>
+<SortChooser @value={{this.sort}} @sortOptions={{this.sortOptions}} @onChange={{action this.handleSortChange}} />
+
+<WrapperList
+  @title="List of Elements"
+  @meta={{@model.meta}}
+  @onChangePage={{action this.handlePageChange}}
+  @onChangeSize={{action this.handleSizeChange}}
+>
+  <ul>
+    {{#each @model.data as |element|}}
+    <li>
+      {{element.title}} (id: {{element.id}})
+      <LinkTo @route="element-details" @model={{element.id}}>Details</LinkTo>
+      <LinkTo @route="element-edit" @model={{element.id}}>Edit</LinkTo>
+      <a href="javascript:void(0)" {{on "click" (fn this.remove element.id)}}>Remove</a>
+    </li>
+    {{/each}}
+  </ul>
 
 </WrapperList>
