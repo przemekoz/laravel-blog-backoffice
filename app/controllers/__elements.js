@@ -16,6 +16,7 @@ export default class ElementsController extends Controller {
   @tracked
   sort = undefined;
 
+  // DIFFRENT
   sortOptions = [
     {
       label: ' - choose sort option - ',
@@ -28,14 +29,6 @@ export default class ElementsController extends Controller {
     {
       label: 'title descending',
       value: '-title'
-    },
-    {
-      label: 'created date ascending',
-      value: 'created-at'
-    },
-    {
-      label: 'created date descending',
-      value: '-created-at'
     }
   ];
 
@@ -45,6 +38,7 @@ export default class ElementsController extends Controller {
     const confirmed = confirm("Are you sure?");
 
     if (confirmed) {
+      // DIFFRENT
       const post = this.store.peekRecord('element', elementId);
       post.destroyRecord(); // => DELETE to /posts/2
     }
@@ -76,6 +70,7 @@ export default class ElementsController extends Controller {
   }
 
   async refreshData() {
+    // DIFFRENT
     return this.store.query('element', {
       page: {
         number: this.page,

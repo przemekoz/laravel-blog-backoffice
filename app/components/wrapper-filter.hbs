@@ -1,5 +1,8 @@
 
-  {{yield}}
-  <button style="display: inline">reset</button>
-  <button type="submit" style="display: inline" {{on 'click' this.handleChange}}>filter</button>
+<form {{action "submit" on="submit"}} autocomplete="off">
 
+  {{yield}}
+
+  <button type="reset" style="display: inline">reset</button>
+  <button type="submit" style="display: inline">filter</button>
+</form>

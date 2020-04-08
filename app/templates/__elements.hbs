@@ -1,21 +1,35 @@
 
-<h2>List of Elements</h2>
+<WrapperFilter @onSubmit={{action this.handleFilterChange}}>
 
-{{!-- <WrapperFilter @onSubmit={{action this.handleFilterChange}}>
+
+
+  {{!-- // DIFFRENT --}}
   <div style="display: inline">
-    <label for="title">Title</label>
+    <label for="title">__Title</label>
     <Input id="title" name="title" @value={{this.filter.title}} />
   </div>
   <div style="display: inline">
-    <label for="description">Description</label>
+    <label for="description">___Description</label>
     <Input id="description" name="description" @value={{this.filter.description}} />
   </div>
+  {{!-- // DIFFRENT --}}
+
+
+
+
 </WrapperFilter>
 
 <SortChooser @value={{this.sort}} @sortOptions={{this.sortOptions}} @onChange={{action this.handleSortChange}} />
 
-
+<WrapperList
+  @meta={{@model.meta}}
+  @onChangePage={{action this.handlePageChange}}
+  @onChangeSize={{action this.handleSizeChange}}
+>
   <ul>
+
+
+    {{!-- // DIFFRENT --}}
     {{#each @model.data as |element|}}
     <li>
       {{element.title}} (id: {{element.id}})
@@ -24,10 +38,9 @@
       <a href="javascript:void(0)" {{on "click" (fn this.remove element.id)}}>Remove</a>
     </li>
     {{/each}}
-  </ul> --}}
+    {{!-- // DIFFRENT --}}
 
-<WrapperList
-  @modelName="element"
-  @meta={{@model.meta}}
-  @data={{@model.data}}
-></WrapperList>
+
+  </ul>
+
+</WrapperList>

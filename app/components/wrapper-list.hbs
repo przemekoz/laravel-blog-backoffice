@@ -1,18 +1,39 @@
 <hr />
-<i>I'm component Wrappers::ListsView</i>
+<i>I'm component WrapperList</i>
 
-<h2>{{@title}}</h2>
+{{!-- <WrapperFilter @onSubmit={{action this.handleFilterChange}}>
 
-{{yield}}
+  <div style="display: inline">
+    <label for="title">Title</label>
+    <Input id="title" name="title" @value={{this.filter.title}} />
+  </div>
+  <div style="display: inline">
+    <label for="description">Description</label>
+    <Input id="description" name="description" @value={{this.filter.description}} />
+  </div>
 
-<hr />
+</WrapperFilter> --}}
 
-<Pagination
+{{!-- dynamically render component: {modelName}/filter --}}
+{{component this.filterComponentName param1=paramValue param2=anotherParamValue}}
+
+{{!-- dynamically render component: {modelName}/list --}}
+{{component this.listComponentName param1=paramValue param2=anotherParamValue}}
+
+{{this.filterComponentName}}
+
+{{this.listComponentName}}
+
+
+
+{{!-- <Pagination
   @size={{@meta.size}}
   @total={{@meta.total}}
   @currentPage={{@meta.currentPage}}
   @totalPages={{@meta.totalPages}}
-  @onChangePage={{@onChangePage}}
-  @onChangeSize={{@onChangeSize}}
+  @onChangePage={{action this.handlePageChange}}
+  @onChangeSize={{action this.handleSizeChange}}
   @sizeOptions={{this.sizeOptions}}
-/>
+/> --}}
+
+<hr />
