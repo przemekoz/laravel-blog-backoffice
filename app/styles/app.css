@@ -15,7 +15,7 @@ a:hover {
   box-shadow: none;
 }
 
-.list-content-row {
+.list-content-row, .list-content-header-row {
   border-bottom: 1px solid #f5f5f5;
 }
 

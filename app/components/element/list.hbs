@@ -1,6 +1,6 @@
 <div class="container-fluid mb-3">
 
-  <div class="row">
+  <div class="row list-content-header-row">
     <div class="col-1 list-column-header" style="max-width: 40px">
       Lp.
     </div>
@@ -39,13 +39,11 @@
 
     <div class="col-3 list-column text-right">
       <LinkTo @route="element-edit" @model={{element.id}}>
-        <button type="button" class="btn btn-outline-primary btn-sm list-action-btn">
-          <i class="fa fas fa-pencil"></i> Edit
-        </button>
+        <Shared::btnEdit />
       </LinkTo>
-      <button type="button" class="btn btn-outline-danger btn-sm list-action-btn" {{on "click" (fn this.handleDelete element.id)}}>
-        <i class="fa fas fa-trash"></i> Remove
-      </button>
+      <span {{on "click" (fn this.handleDelete element.id)}}>
+        <Shared::btnRemove />
+      </span>
     </div>
 
   </div>
