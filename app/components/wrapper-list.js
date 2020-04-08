@@ -1,23 +1,23 @@
 import Component from '@glimmer/component';
+import { action } from "@ember/object";
+import { tracked } from '@glimmer/tracking';
+import { inject as service } from '@ember/service';
 
 export default class WrapperListComponent extends Component {
 
-  // temp
-  paramValue = '';
-  anotherParamValue = '';
+  @service store;
 
-  modelName = '';
+  @tracked
+  page = 1;
 
-  filterComponentName = '';
+  @tracked
+  size = 10;
 
-  listComponentName = '';
+  @tracked
+  filter = {};
 
-  constructor() {
-    super(...arguments);
-    this.modelName = this.args.modelName;
-    this.filterComponentName = `${this.modelName}/filter`;
-    this.listComponentName = `${this.modelName}/list`;
-  }
+  @tracked
+  sort = undefined;
 
   sizeOptions = [
     {
@@ -33,4 +33,74 @@ export default class WrapperListComponent extends Component {
       value: 50,
     }
   ];
+
+  modelName = '';
+
+  filterComponentName = '';
+
+  listComponentName = '';
+
+  constructor() {
+    super(...arguments);
+    this.modelName = this.args.modelName;
+    this.filterComponentName = `${this.modelName}/filter`;
+    this.listComponentName = `${this.modelName}/list`;
+  }
+
+  @action
+  handleDelete(itemId) {
+    const confirmed = confirm("Are you sure?");
+
+    if (confirmed) {
+      console.log('remove', itemId)
+      const post = this.store.peekRecord('element', itemId);
+      post.destroyRecord(); // => DELETE to /posts/2
+    }
+  }
+
+  @action
+  handleFilterChange(filter) {
+    this.page = 1;
+    this.filter = filter;
+    this.refreshData();
+  }
+
+  @action
+  handleSortChange(sort) {
+    this.sort = sort;
+    this.refreshData();
+  }
+
+  @action
+  handlePageChange(page) {
+    this.page = page;
+    this.refreshData();
+  }
+
+  @action
+  handleSizeChange(size) {
+    this.page = 1;
+    this.size = size;
+    this.refreshData();
+  }
+
+  async refreshData() {
+    return this.store.query(this.modelName, {
+      page: {
+        number: this.page,
+        size: this.size
+      },
+      sort: this.sort,
+      filter: this.filter,
+      filterType:  {
+        title: 'text',
+        description: 'text'
+      }
+    }).then( results => {
+      return {
+        data: results,
+        meta: results.meta
+      };
+    });
+  }
 }

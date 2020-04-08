@@ -1,33 +1,10 @@
 
 <h2>List of Elements</h2>
 
-{{!-- <WrapperFilter @onSubmit={{action this.handleFilterChange}}>
-  <div style="display: inline">
-    <label for="title">Title</label>
-    <Input id="title" name="title" @value={{this.filter.title}} />
-  </div>
-  <div style="display: inline">
-    <label for="description">Description</label>
-    <Input id="description" name="description" @value={{this.filter.description}} />
-  </div>
-</WrapperFilter>
-
-<SortChooser @value={{this.sort}} @sortOptions={{this.sortOptions}} @onChange={{action this.handleSortChange}} />
-
-
-  <ul>
-    {{#each @model.data as |element|}}
-    <li>
-      {{element.title}} (id: {{element.id}})
-      <LinkTo @route="element-details" @model={{element.id}}>Details</LinkTo>
-      <LinkTo @route="element-edit" @model={{element.id}}>Edit</LinkTo>
-      <a href="javascript:void(0)" {{on "click" (fn this.remove element.id)}}>Remove</a>
-    </li>
-    {{/each}}
-  </ul> --}}
-
 <WrapperList
   @modelName="element"
+  @filterType={{this.filterType}}
+  @sortOptions={{this.sortOptions}}
   @meta={{@model.meta}}
   @data={{@model.data}}
 ></WrapperList>

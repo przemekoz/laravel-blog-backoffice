@@ -1,1 +1,54 @@
-I'm element::list
+<div class="container-fluid mb-3">
+
+  <div class="row">
+    <div class="col-1 list-column-header" style="max-width: 40px">
+      Lp.
+    </div>
+    <div class="col-7 list-column-header">
+      Title
+    </div>
+    <div class="col-1 list-column-header">
+      Status
+    </div>
+    <div class="col-3 list-column-header text-right">
+      Actions
+    </div>
+  </div>
+
+  {{#each @data as |element index|}}
+  <div class="row list-content-row">
+
+    <div class="col-1 list-column" style="max-width: 40px">
+      {{index}}.
+    </div>
+
+    <div class="col-7 list-column">
+      <LinkTo @route="element-details" @model={{element.id}} data-toggle="tooltip" title="Show details">
+        {{element.title}}
+      </LinkTo>
+      (id: {{element.id}})
+    </div>
+
+    <div class="col-1 list-column">
+      {{#if element.isActive}}
+        <span class="badge badge-success">Active</span>
+      {{else}}
+        <span class="badge badge-danger">Inactive</span>
+      {{/if}}
+    </div>
+
+    <div class="col-3 list-column text-right">
+      <LinkTo @route="element-edit" @model={{element.id}}>
+        <button type="button" class="btn btn-outline-primary btn-sm list-action-btn">
+          <i class="fa fas fa-pencil"></i> Edit
+        </button>
+      </LinkTo>
+      <button type="button" class="btn btn-outline-danger btn-sm list-action-btn" {{on "click" (fn this.handleDelete element.id)}}>
+        <i class="fa fas fa-trash"></i> Remove
+      </button>
+    </div>
+
+  </div>
+  {{/each}}
+
+</div>

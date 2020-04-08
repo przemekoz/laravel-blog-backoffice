@@ -1,8 +1,17 @@
-
 <form {{action "submit" on="submit"}} autocomplete="off">
+  <div class="container-fluid">
+    <div class="row">
 
-  {{yield}}
+      {{yield}}
 
-  <button type="reset" style="display: inline">reset</button>
-  <button type="submit" style="display: inline">filter</button>
+      <div class="col-3 filter-column">
+        <button type="reset" class="btn btn-outline-secondary btn-sm" {{on 'click' this.reset}}>
+          <i class="fa fas fa-remove"></i> Clear
+        </button>
+        <button type="submit" class="btn btn-outline-primary btn-sm" style="display: inline">
+          <i class="fa fas fa-search"></i> Search
+        </button>
+      </div>
+    </div>
+  </div>
 </form>
