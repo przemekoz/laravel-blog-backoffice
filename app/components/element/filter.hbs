@@ -1,18 +1,16 @@
-<WrapperFilter @onSubmit={{action this.handleSubmit}} @onReset={{action this.handleReset}}>
+<Wrapper::Filter @onSubmit={{action this.handleSubmit}} @onReset={{action this.handleReset}}>
 
-  <div class="col-4 filter-column">
+  <div class="col-3 filter-column">
     <div class="form-group">
-      <label for="title">Title</label>
-      <Input id="title" class="form-control" name="title" @value={{this.filter.title}} />
+      <Input id="title" class="form-control form-control-sm" name="title" @value={{this.filter.title}} placeholder="Filter by: Title" />
     </div>
   </div>
 
-  <div class="col-4 filter-column">
+  <div class="col-3 filter-column">
     <div class="form-group">
-      <label for="description">Description</label>
-      <Input id="description" class="form-control" name="description" @value={{this.filter.description}} />
+      <Input id="description" class="form-control form-control-sm" name="description" @value={{this.filter.description}} placeholder="Filter by: Description" />
     </div>
   </div>
 
 
-</WrapperFilter>
+</Wrapper::Filter>

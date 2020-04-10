@@ -18,31 +18,7 @@ export default class ElementEditController extends Controller {
       id: 3,
       title: "third tag"
     },
-  ]
-
-
-  @action
-  async submit() {
-
-
-    // console.log('11111', this.model.data)
-
-    // create
-
-    const post = this.store.createRecord('element', this.model.data);
-
-    return post.save(); // -> request
-    // edit
-
-    // store.findRecord('element', 1).then(element => {
-    //   element.title; // => "Rails is Omakase"
-
-    //   element.title = 'A new element';
-
-    //   element.save(); // => PATCH to '/posts/1'
-    // });
-
-  }
+  ];
 
   @action
   onPickTag(tag) {
@@ -60,7 +36,7 @@ export default class ElementEditController extends Controller {
 
     });
 
-    this.store.findRecord('person', this.model.data.id).then(element => {
+    this.store.findRecord('tag', this.model.data.id).then(element => {
       // ...after the record has loaded
       element.tags = [ ...element.tags, { id: 123, type: "tag" } ];
     });

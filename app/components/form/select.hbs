@@ -1,0 +1,11 @@
+<select class="form-control form-control-sm" {{on "change" this.handleChange}}>
+
+  {{#each @options as |item|}}
+    {{#if (equal @value item.value)}}
+      <option value={{item.value}} selected>{{item.label}}</option>
+    {{else}}
+      <option value={{item.value}}>{{item.label}}</option>
+    {{/if}}
+  {{/each}}
+
+</select>

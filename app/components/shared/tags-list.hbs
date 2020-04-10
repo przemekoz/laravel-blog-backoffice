@@ -1,0 +1,7 @@
+{{#each @model as |tag|}}
+  <span class="badge badge-pill badge-primary">{{tag.title}} (id: {{tag.id}})
+    {{#if @onRemoveTag}}
+      <span title="Remove" {{on 'click' (fn @onRemoveTag tag.id)}}>x</span>
+    {{/if}}
+  </span>
+{{/each}}

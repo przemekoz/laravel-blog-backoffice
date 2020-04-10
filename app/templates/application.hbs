@@ -1,18 +1,41 @@
-<nav class="navbar navbar-light">
-  <a class="navbar-brand" href="#">Laravel Blog Backoffice</a>
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand mr-auto" href="#">Laravel Blog Backoffice</a>
+
+  <div class="dropdown dropleft">
+    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false">
+      <i class="fa fas fa-user-circle text-white"></i>
+    </a>
+
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <a class="dropdown-item" href="#"><i class="fa fas fa-user"></i> Profile</a>
+      <a class="dropdown-item" href="#"><i class="fa fas fa-lock"></i> Logout</a>
+    </div>
+  </div>
 </nav>
-<div class="jumbo">
-  Laravel Blog Backoffice
-</div>
+
 <div class="container-fluid">
   <div class="row">
-    <div class="col-3">
-      <ul class="nav flex-column">
-        <li class="nav-item"><i class="fa fas fa-file"></i><LinkTo @route="elements">Elements</LinkTo></li>
-      </ul>
+
+    <div class="col-2 pl-0 pr-0">
+      <div class="main-left-menu">
+        <ul class="nav flex-column">
+          <Shared::NavItem @route="elements" @label="Elements" />
+        </ul>
+      </div>
     </div>
-    <div class="col-9">
-      {{outlet}}
+
+    <div class="col-10 p-0">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Library</li>
+        </ol>
+      </nav>
+
+      <div class="p-3">
+        {{outlet}}
+      </div>
     </div>
   </div>
 </div>

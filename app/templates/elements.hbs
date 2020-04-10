@@ -1,10 +1,12 @@
 
-<h2>List of Elements</h2>
+<Wrapper::Card @header="List of Elements">
 
-<WrapperList
-  @modelName="element"
-  @filterType={{this.filterType}}
-  @sortOptions={{this.sortOptions}}
-  @meta={{@model.meta}}
-  @data={{@model.data}}
-></WrapperList>
+  <Wrapper::List
+    @modelName="element"
+    @filterType={{this.filterType}}
+    @sortOptions={{this.sortOptions}}
+    @meta={{@model.meta}}
+    @data={{@model.data}}
+  />
+
+</Wrapper::Card>

@@ -1,4 +1,4 @@
-<TagsList @model={{@listOfTags}} @onRemoveTag={{@onRemoveTag}} />
+<Shared::TagsList @model={{@listOfTags}} @onRemoveTag={{@onRemoveTag}} />
 
 <InputAutocomplete @cssId="tags-managment-tags" @getModel="tag" @onPick={{@onPickTag}} @phrase={{this.autocompleteValue}} @onPhraseUpdate={{onPhraseUpdate}} />
 
