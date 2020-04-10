@@ -8,6 +8,12 @@ export default class WrapperListComponent extends Component {
   @service store;
 
   @tracked
+  data = [];
+
+  @tracked
+  meta = {};
+
+  @tracked
   page = 1;
 
   @tracked
@@ -45,6 +51,8 @@ export default class WrapperListComponent extends Component {
 
   constructor() {
     super(...arguments);
+    this.meta = this.args.meta;
+    this.data = this.args.data;
     this.modelName = this.args.modelName;
     this.filterComponentName = `${this.modelName}/filter`;
     this.listComponentName = `${this.modelName}/list`;
@@ -100,11 +108,9 @@ export default class WrapperListComponent extends Component {
         description: 'text'
       }
     }).then( results => {
-      return {
-        data: results,
-        meta: results.meta
-      };
-      this.isMoreThanViewElements = results.lenght >= 20 && this.size > 10;
+      this.isMoreThanViewElements = results.length >= 20 && this.size > 10;
+      this.data = results;
+      this.meta = results.meta;
     });
   }
 }

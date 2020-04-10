@@ -13,8 +13,8 @@
     <div class="row">
       <div class="col-12">
           <Shared::PaginationNav
-            @currentPage={{@meta.currentPage}}
-            @totalPages={{@meta.totalPages}}
+            @currentPage={{this.meta.currentPage}}
+            @totalPages={{this.meta.totalPages}}
             @onChangePage={{action this.handlePageChange}}
           />
       </div>
@@ -24,13 +24,13 @@
 </div>
 
 {{!-- dynamically render component: {modelName}/list --}}
-{{component this.listComponentName data=@data onDelete=this.handleDelete}}
+{{component this.listComponentName data=this.data onDelete=this.handleDelete}}
 
 <Shared::Pagination
-  @size={{@meta.size}}
-  @total={{@meta.total}}
-  @currentPage={{@meta.currentPage}}
-  @totalPages={{@meta.totalPages}}
+  @size={{this.meta.size}}
+  @total={{this.meta.total}}
+  @currentPage={{this.meta.currentPage}}
+  @totalPages={{this.meta.totalPages}}
   @onChangePage={{action this.handlePageChange}}
   @onChangeSize={{action this.handleSizeChange}}
   @sizeOptions={{this.sizeOptions}}
