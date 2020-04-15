@@ -63,9 +63,8 @@ export default class WrapperListComponent extends Component {
     const confirmed = confirm("Are you sure?");
 
     if (confirmed) {
-      console.log('remove', itemId)
       const post = this.store.peekRecord('element', itemId);
-      post.destroyRecord(); // => DELETE to /posts/2
+      post.destroyRecord();
     }
   }
 

@@ -22,11 +22,19 @@ export default class ElementsController extends Controller {
     },
     {
       label: 'created date ascending',
-      value: 'created-at'
+      value: 'created_at'
     },
     {
       label: 'created date descending',
-      value: '-created-at'
+      value: '-created_at'
+    },
+    {
+      label: 'updated date ascending',
+      value: 'updated_at'
+    },
+    {
+      label: 'updated date descending',
+      value: '-updated_at'
     }
   ];
 }
