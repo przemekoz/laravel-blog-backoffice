@@ -1,5 +1,5 @@
 
-<Wrapper::Card @header="Element Edit">
+<Wrapper::Card @header="Element Edit" @mode="edit" @btnLabel="Save">
 
   {{#with @model.data as |element|}}
   <Wrapper::Edit @model={{element}} @modelName="element" @routeBack="elements">

@@ -1,13 +1,33 @@
 <div class="card">
   <div class="card-header">
-    <i class="fa fas fa-cubes"></i>
-    <i class="fa fas fa-edit"></i>
+    {{#if (equal @mode "list")}}
     <i class="fa fas fa-th-list"></i>
+    {{/if}}
+    {{#if (equal @mode "edit")}}
+    <i class="fa fas fa-edit"></i>
+    {{/if}}
+    {{#if (equal @mode "details")}}
+    <i class="fa fas fa-eye"></i>
+    {{/if}}
+    {{!-- <i class="fa fas fa-cubes"></i>
     <i class="fa fas fa-table"></i>
     <i class="fa fas fa-list-ol"></i>
     <i class="fa fas fa-th-large"></i>
-    <i class="fa fas fa-eye"></i>
-     {{@header}}
+    <i class="fa fas fa-eye"></i> --}}
+    {{@header}}
+
+    <LinkTo @route="element-edit" @model="element" class="float-right">
+      <button type="button" class="btn btn-success btn-sm">
+        {{#if (equal @mode "list")}}
+          <i class="fa fas fa-plus"></i>
+        {{/if}}
+        {{#if (equal @mode "edit")}}
+          <i class="fa fas fa-save"></i>
+        {{/if}}
+        {{@btnLabel}}
+      </button>
+    </LinkTo>
+
   </div>
   <div class="card-body">
     {{yield}}
