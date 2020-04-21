@@ -1,0 +1,19 @@
+<div class="dropdown dropleft">
+  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+    aria-expanded="false">
+    <i class="fa fas fa-flag text-white"></i>
+  </a>
+
+  <span class="text-white">
+    {{this.lang}}
+  </span>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="#" {{on "click" (action this.handleChangeLang "en")}}><i class="fa fas fa-flag"></i>
+      {{lang "English"}}</a>
+    <a class="dropdown-item" href="#" {{on "click" (action this.handleChangeLang "pl")}}><i class="fa fas fa-flag"></i>
+      {{lang "Polish"}}</a>
+    <a class="dropdown-item" href="#" {{on "click" (action this.handleChangeLang "de")}}><i class="fa fas fa-flag"></i>
+      {{lang "German"}}</a>
+  </div>
+</div>
