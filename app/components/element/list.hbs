@@ -5,13 +5,13 @@
       Lp.
     </div>
     <div class="col-7 list-column-header">
-      Title
+      {{lang "Title"}}
     </div>
     <div class="col-1 list-column-header">
       Status
     </div>
     <div class="col-3 list-column-header text-right">
-      Actions
+      {{lang "Actions"}}
     </div>
   </div>
 
@@ -31,9 +31,9 @@
 
     <div class="col-1 list-column">
       {{#if element.isActive}}
-        <span class="badge badge-success">Active</span>
+        <span class="badge badge-success">{{lang "Active"}}</span>
       {{else}}
-        <span class="badge badge-danger">Inactive</span>
+        <span class="badge badge-danger">{{lang "Inactive"}}</span>
       {{/if}}
     </div>
 
