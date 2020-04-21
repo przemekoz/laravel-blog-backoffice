@@ -10,4 +10,5 @@ Router.map(function() {
   this.route('elements');
   this.route('element-details', {path: '/element-details/:id'});
   this.route('element-edit', {path: '/element-edit/:id'});
+  this.route('element-create');
 });

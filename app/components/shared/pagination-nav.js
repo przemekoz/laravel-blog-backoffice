@@ -23,7 +23,7 @@ export default class SharedPaginationNavComponent extends Component {
         this.args.onChangePage(this.args.currentPage + 1);
         break;
       case 'last':
-        this.args.onChangePage(this.args.totalPages - 1);
+        this.args.onChangePage(this.args.totalPages);
         break;
       default:
         // no action

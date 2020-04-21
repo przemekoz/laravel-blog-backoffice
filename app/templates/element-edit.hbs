@@ -1,8 +1,8 @@
 
-<Wrapper::Card @header="Element Edit" @mode="edit" @btnLabel="Save">
+<Wrapper::Card @header="Element Edit" @mode="edit" @backRoute="elements">
 
   {{#with @model.data as |element|}}
-  <Wrapper::Edit @model={{element}} @modelName="element" @routeBack="elements">
+  <Wrapper::Edit @model={{element}} @modelName="element">
 
 
     <div class="form-group">

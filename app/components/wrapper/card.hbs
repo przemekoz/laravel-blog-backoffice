@@ -1,32 +1,38 @@
 <div class="card">
   <div class="card-header">
     {{#if (equal @mode "list")}}
-    <i class="fa fas fa-th-list"></i>
-    {{/if}}
-    {{#if (equal @mode "edit")}}
-    <i class="fa fas fa-edit"></i>
+      <i class="fa fas fa-th-list"></i>
     {{/if}}
     {{#if (equal @mode "details")}}
-    <i class="fa fas fa-eye"></i>
+      <i class="fa fas fa-eye"></i>
     {{/if}}
-    {{!-- <i class="fa fas fa-cubes"></i>
-    <i class="fa fas fa-table"></i>
-    <i class="fa fas fa-list-ol"></i>
-    <i class="fa fas fa-th-large"></i>
-    <i class="fa fas fa-eye"></i> --}}
+    {{#if (equal @mode "create")}}
+      <i class="fa fas fa-plus-circle"></i>
+    {{/if}}
+    {{#if (equal @mode "edit")}}
+      <i class="fa fas fa-edit"></i>
+    {{/if}}
+
     {{@header}}
 
-    <LinkTo @route="element-edit" @model="element" class="float-right">
-      <button type="button" class="btn btn-success btn-sm">
-        {{#if (equal @mode "list")}}
+    {{#if (includes @mode "edit|details|create")}}
+      <LinkTo @route={{@backRoute}} class="float-right">
+        <Shared::BtnBack />
+      </LinkTo>
+    {{/if}}
+
+    {{#if (includes @mode "edit|create")}}
+      <Shared::BtnSave />
+    {{/if}}
+
+    {{#if (equal @mode "list")}}
+      <LinkTo @route={{@createRoute}} class="float-right">
+        <button type="button" class="btn btn-success btn-sm">
           <i class="fa fas fa-plus"></i>
-        {{/if}}
-        {{#if (equal @mode "edit")}}
-          <i class="fa fas fa-save"></i>
-        {{/if}}
-        {{@btnLabel}}
-      </button>
-    </LinkTo>
+          {{@createLabel}}
+        </button>
+      </LinkTo>
+    {{/if}}
 
   </div>
   <div class="card-body">
