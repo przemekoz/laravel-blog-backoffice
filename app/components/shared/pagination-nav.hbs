@@ -1,65 +1,84 @@
-<nav aria-label="Page navigation">
-  <ul class="pagination">
+<div class="container-fluid">
+  <div class="row">
 
-    {{#if isPrevDisabled}}
-    <li class="page-item disabled">
-      <button class="page-link" aria-label="First" disabled="disabled">
-        <span aria-hidden="true">&laquo;</span>
-      </button>
-    </li>
-    {{else}}
-    <li class="page-item">
-      <button class="page-link" aria-label="First" {{on 'click' (action this.handleChangePage 'first')}}
-        data-toggle="tooltip" title="Go to first page">
-        <span aria-hidden="true">&laquo;</span>
-      </button>
-    </li>
-    {{/if}}
+    <div class="col-4">
+      <nav aria-label="Page navigation previous">
+        <ul class="pagination">
 
-    {{#if isPrevDisabled}}
-    <li class="page-item disabled">
-      <button class="page-link" aria-label="Previous" disabled="disabled">
-        <span aria-hidden="true">&lsaquo;</span>
-      </button>
-    </li>
-    {{else}}
-    <li class="page-item">
-      <button class="page-link" aria-label="Previous" {{on 'click' (action this.handleChangePage 'prev')}}
-        data-toggle="tooltip" title="Go to previous page">
-        <span aria-hidden="true">&lsaquo;</span>
-      </button>
-    </li>
-    {{/if}}
+          {{#if isPrevDisabled}}
+          <li class="page-item disabled">
+            <button class="page-link" aria-label="First" disabled="disabled">
+              <span aria-hidden="true">&laquo;</span>
+            </button>
+          </li>
+          {{else}}
+          <li class="page-item">
+            <button class="page-link" aria-label="First" {{on 'click' (action this.handleChangePage 'first')}}
+              data-toggle="tooltip" title="Go to first page">
+              <span aria-hidden="true">&laquo;</span>
+            </button>
+          </li>
+          {{/if}}
 
-    {{#if isNextDisabled}}
-    <li class="page-item disabled">
-      <button class="page-link" aria-label="Next" disabled="disabled">
-        <span aria-hidden="true">&rsaquo;</span>
-      </button>
-    </li>
-    {{else}}
-    <li class="page-item">
-      <button class="page-link" aria-label="Next" {{on 'click' (action this.handleChangePage 'next')}}
-        data-toggle="tooltip" title="Go to next page">
-        <span aria-hidden="true">&rsaquo;</span>
-      </button>
-    </li>
-    {{/if}}
+          {{#if isPrevDisabled}}
+          <li class="page-item disabled">
+            <button class="page-link" aria-label="Previous" disabled="disabled">
+              <span aria-hidden="true">&lsaquo;</span>
+            </button>
+          </li>
+          {{else}}
+          <li class="page-item">
+            <button class="page-link" aria-label="Previous" {{on 'click' (action this.handleChangePage 'prev')}}
+              data-toggle="tooltip" title="Go to previous page">
+              <span aria-hidden="true">&lsaquo;</span>
+            </button>
+          </li>
+          {{/if}}
+        </ul>
+      </nav>
+    </div>
 
-    {{#if isNextDisabled}}
-    <li class="page-item disabled">
-      <button class="page-link" aria-label="Last" disabled="disabled">
-        <span aria-hidden="true">&raquo;</span>
-      </button>
-    </li>
-    {{else}}
-    <li class="page-item">
-      <button class="page-link" aria-label="Last" {{on 'click' (action this.handleChangePage 'last')}}
-        data-toggle="tooltip" title="Go to last page">
-        <span aria-hidden="true">&raquo;</span>
-      </button>
-    </li>
-    {{/if}}
+    <div class="col-4 text-center">
+      {{lang "Page"}} <strong>{{@currentPage}}</strong> {{lang "of"}} {{@totalPages}}
+    </div>
 
-  </ul>
-</nav>
+    <div class="col-4">
+      <nav aria-label="Page navigation next">
+        <ul class="pagination float-right">
+
+          {{#if isNextDisabled}}
+          <li class="page-item disabled">
+            <button class="page-link" aria-label="Next" disabled="disabled">
+              <span aria-hidden="true">&rsaquo;</span>
+            </button>
+          </li>
+          {{else}}
+          <li class="page-item">
+            <button class="page-link" aria-label="Next" {{on 'click' (action this.handleChangePage 'next')}}
+              data-toggle="tooltip" title="Go to next page">
+              <span aria-hidden="true">&rsaquo;</span>
+            </button>
+          </li>
+          {{/if}}
+
+          {{#if isNextDisabled}}
+          <li class="page-item disabled">
+            <button class="page-link" aria-label="Last" disabled="disabled">
+              <span aria-hidden="true">&raquo;</span>
+            </button>
+          </li>
+          {{else}}
+          <li class="page-item">
+            <button class="page-link" aria-label="Last" {{on 'click' (action this.handleChangePage 'last')}}
+              data-toggle="tooltip" title="Go to last page">
+              <span aria-hidden="true">&raquo;</span>
+            </button>
+          </li>
+          {{/if}}
+
+        </ul>
+      </nav>
+    </div>
+
+  </div>
+</div>

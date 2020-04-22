@@ -14,9 +14,22 @@ translations.set('add',         'Dodaj');
 translations.set('elements',    'Elementy');
 translations.set('add-element', 'Dodaj Element');
 translations.set('title',       'Nazwa');
+translations.set('page',        'Strona');
+translations.set('of',          'z');
+translations.set('per-page',    'na stronie');
+translations.set('all-items',   'Wszystkich');
 translations.set('description', 'Opis');
 translations.set('tags',        'Tagi');
 translations.set('profile',     'Profil');
 translations.set('logout',      'Wyloguj się');
 
+translations.set('list-of-elements',    'Lista Elementów');
+translations.set('title:-from-a-to-z',  'Nazwa: od A do Z');
+translations.set('title:-from-z-to-a',  'Nazwa: od Z do A');
+translations.set('choose-sort-option',  'Wybierz opcję sortowania');
+translations.set('created-date:-from-oldest',  'Utworzenie: od najstarszych');
+translations.set('created-date:-from-newest',  'Utworzenie: od najnowszych');
+translations.set('updated-date:-from-oldest',  'Modyfikacja: od najstarszych');
+translations.set('updated-date:-from-newest',  'Modyfikacja: od najnowszych');
 
+translations.set('are-you-sure-you-want-to-delete?', 'Czy na pewno chcesz usunąć?');

@@ -1,6 +1,9 @@
 import Controller from '@ember/controller';
+import { inject as service } from '@ember/service';
 
 export default class ElementsController extends Controller {
+
+  @service lang;
 
   filterType = {
     title: 'text',
@@ -9,31 +12,31 @@ export default class ElementsController extends Controller {
 
   sortOptions = [
     {
-      label: ' - choose sort option - ',
+      label: ` - ${this.lang.get('Choose sort option')} - `,
       value: ''
     },
     {
-      label: 'title ascending',
+      label: this.lang.get('Title: from A to Z'),
       value: 'title'
     },
     {
-      label: 'title descending',
+      label: this.lang.get('Title: from Z to A'),
       value: '-title'
     },
     {
-      label: 'created date ascending',
+      label: this.lang.get('Created date: from oldest'),
       value: 'created_at'
     },
     {
-      label: 'created date descending',
+      label: this.lang.get('Created date: from newest'),
       value: '-created_at'
     },
     {
-      label: 'updated date ascending',
+      label: this.lang.get('Updated date: from oldest'),
       value: 'updated_at'
     },
     {
-      label: 'updated date descending',
+      label: this.lang.get('Updated date: from newest'),
       value: '-updated_at'
     }
   ];

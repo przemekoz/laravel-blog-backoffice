@@ -6,6 +6,7 @@ import { inject as service } from '@ember/service';
 export default class WrapperListComponent extends Component {
 
   @service store;
+  @service lang;
 
   @tracked
   data = [];
@@ -30,15 +31,15 @@ export default class WrapperListComponent extends Component {
 
   sizeOptions = [
     {
-      label: '10 items per page',
+      label: `10 ${this.lang.get('per page')}`,
       value: 10,
     },
     {
-      label: '20 items per page',
+      label: `20 ${this.lang.get('per page')}`,
       value: 20,
     },
     {
-      label: '50 items per page',
+      label: `30 ${this.lang.get('per page')}`,
       value: 50,
     }
   ];
@@ -54,13 +55,13 @@ export default class WrapperListComponent extends Component {
     this.meta = this.args.meta;
     this.data = this.args.data;
     this.modelName = this.args.modelName;
-    this.filterComponentName = `${this.modelName}/filter`;
-    this.listComponentName = `${this.modelName}/list`;
+    this.filterComponentName = `${ this.modelName }/filter`;
+    this.listComponentName = `${ this.modelName }/list`;
   }
 
   @action
   handleDelete(itemId) {
-    const confirmed = confirm("Are you sure?");
+    const confirmed = confirm(this.lang.get("Are you sure you want to delete?"));
 
     if (confirmed) {
       const post = this.store.peekRecord('element', itemId);
@@ -102,11 +103,11 @@ export default class WrapperListComponent extends Component {
       },
       sort: this.sort,
       filter: this.filter,
-      filterType:  {
+      filterType: {
         title: 'text',
         description: 'text'
       }
-    }).then( results => {
+    }).then(results => {
       this.isMoreThanViewElements = results.length >= 20 && this.size > 10;
       this.data = results;
       this.meta = results.meta;

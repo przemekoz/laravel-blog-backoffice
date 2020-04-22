@@ -1,3 +1,4 @@
+import Service from '@ember/service';
 import { LANG } from '../lang/lang';
 
 const getBrowserLang = () => {
@@ -25,7 +26,7 @@ export const getLang = () => {
 }
 
 export const getLangKey = (param) => {
-  return param.toLowerCase().replace(" ", "-");
+  return param.toLowerCase().replace(/ /g, "-");
 }
 
 export const getLangPhrase = (phrase) => {
@@ -41,3 +42,8 @@ export const getLangPhrase = (phrase) => {
   return phraseT;
 }
 
+export default class LangService extends Service {
+  get(phrase) {
+    return getLangPhrase(phrase);
+  }
+}
