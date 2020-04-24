@@ -1,12 +1,12 @@
+<Wrapper::List
+  @modelName="element"
+  @filterType={{this.filterType}}
+  @sortOptions={{this.sortOptions}}
+  @meta={{@model.meta}}
+  @data={{@model.data}}
 
-<Wrapper::Card @header={{lang "List of Elements"}} @mode="list" @createLabel={{lang "Add Element"}} @createRoute="element-create">
+  @header={{lang "List of Elements"}}
+  @createLabel={{lang "Add Element"}}
+  @createRoute="element-create"
 
-  <Wrapper::List
-    @modelName="element"
-    @filterType={{this.filterType}}
-    @sortOptions={{this.sortOptions}}
-    @meta={{@model.meta}}
-    @data={{@model.data}}
-  />
-
-</Wrapper::Card>
+/>

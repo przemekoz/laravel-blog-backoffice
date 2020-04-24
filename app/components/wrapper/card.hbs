@@ -1,38 +1,41 @@
 <div class="card">
   <div class="card-header">
-    {{#if (equal @mode "list")}}
+    <span>
+      {{#if (equal @mode "list")}}
       <i class="fa fas fa-th-list"></i>
-    {{/if}}
-    {{#if (equal @mode "details")}}
+      {{/if}}
+      {{#if (equal @mode "details")}}
       <i class="fa fas fa-eye"></i>
-    {{/if}}
-    {{#if (equal @mode "create")}}
+      {{/if}}
+      {{#if (equal @mode "create")}}
       <i class="fa fas fa-plus-circle"></i>
-    {{/if}}
-    {{#if (equal @mode "edit")}}
+      {{/if}}
+      {{#if (equal @mode "edit")}}
       <i class="fa fas fa-edit"></i>
-    {{/if}}
+      {{/if}}
+      {{@header}}
+    </span>
 
-    {{@header}}
-
-    {{#if (includes @mode "edit|details|create")}}
-      <LinkTo @route={{@backRoute}} class="float-right">
+    <div class="float-right">
+      {{#if (includes @mode "edit|details|create")}}
+      <LinkTo @route={{@backRoute}}>
         <Shared::BtnBack />
       </LinkTo>
-    {{/if}}
+      {{/if}}
 
-    {{#if (includes @mode "edit|create")}}
+      {{#if (includes @mode "edit|create")}}
       <Shared::BtnSave />
-    {{/if}}
+      {{/if}}
 
-    {{#if (equal @mode "list")}}
-      <LinkTo @route={{@createRoute}} class="float-right">
+      {{#if (equal @mode "list")}}
+      <LinkTo @route={{@createRoute}}>
         <button type="button" class="btn btn-success btn-sm">
           <i class="fa fas fa-plus"></i>
           {{@createLabel}}
         </button>
       </LinkTo>
-    {{/if}}
+      {{/if}}
+    </div>
 
   </div>
   <div class="card-body">

@@ -1,3 +1,7 @@
-<Wrapper::Card @header="Create Element" @mode="create" @backRoute="elements">
-  {{outlet}}
-</Wrapper::Card>
+{{#with @model.data as |element|}}
+  <Wrapper::Edit @model={{element}} @modelName="element" @header="Add Element" @backRoute="elements" @mode="create">
+
+    <Element::EditForm @model={{element}} />
+
+  </Wrapper::Edit>
+{{/with}}

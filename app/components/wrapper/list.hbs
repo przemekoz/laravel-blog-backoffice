@@ -1,39 +1,43 @@
-<div class="container-fluid mb-3">
-  <div class="row">
-    <div class="col-10">
-      {{!-- dynamically render component: {modelName}/filter --}}
-      {{component this.filterComponentName onSubmit=this.handleFilterChange}}
-    </div>
-    <div class="col-2">
-      <Form::Select @value={{this.sort}} @options={{@sortOptions}} @onChange={{action this.handleSortChange}} />
-    </div>
-  </div>
+<Wrapper::Card @header={{@header}} @mode="list" @createLabel={{@createLabel}} @createRoute={{@createRoute}}>
 
-
-
-  {{#if this.isMoreThanViewElements}}
+  <div class="container-fluid mb-3">
     <div class="row">
-      <div class="col-12">
-          <Shared::PaginationNav
-            @currentPage={{this.meta.currentPage}}
-            @totalPages={{this.meta.totalPages}}
-            @onChangePage={{action this.handlePageChange}}
-          />
+      <div class="col-10">
+        {{!-- dynamically render component: {modelName}/filter --}}
+        {{component this.filterComponentName onSubmit=this.handleFilterChange}}
+      </div>
+      <div class="col-2">
+        <Form::Select @value={{this.sort}} @options={{@sortOptions}} @onChange={{action this.handleSortChange}} />
       </div>
     </div>
-  {{/if}}
 
-</div>
 
-{{!-- dynamically render component: {modelName}/list --}}
-{{component this.listComponentName data=this.data onDelete=this.handleDelete}}
 
-<Shared::Pagination
-  @size={{this.meta.size}}
-  @total={{this.meta.total}}
-  @currentPage={{this.meta.currentPage}}
-  @totalPages={{this.meta.totalPages}}
-  @onChangePage={{action this.handlePageChange}}
-  @onChangeSize={{action this.handleSizeChange}}
-  @sizeOptions={{this.sizeOptions}}
-/>
+    {{#if this.isMoreThanViewElements}}
+      <div class="row">
+        <div class="col-12">
+            <Shared::PaginationNav
+              @currentPage={{this.meta.currentPage}}
+              @totalPages={{this.meta.totalPages}}
+              @onChangePage={{action this.handlePageChange}}
+            />
+        </div>
+      </div>
+    {{/if}}
+
+  </div>
+
+  {{!-- dynamically render component: {modelName}/list --}}
+  {{component this.listComponentName data=this.data onDelete=this.handleDelete}}
+
+  <Shared::Pagination
+    @size={{this.meta.size}}
+    @total={{this.meta.total}}
+    @currentPage={{this.meta.currentPage}}
+    @totalPages={{this.meta.totalPages}}
+    @onChangePage={{action this.handlePageChange}}
+    @onChangeSize={{action this.handleSizeChange}}
+    @sizeOptions={{this.sizeOptions}}
+  />
+
+</Wrapper::Card>

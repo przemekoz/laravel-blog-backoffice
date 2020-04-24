@@ -1,5 +1,9 @@
 <form {{action "submit" on="submit"}} autocomplete="off">
 
-  {{yield}}
+  <Wrapper::Card @header={{@header}} @mode={{@mode}} @backRoute={{@backRoute}}>
+
+    {{yield}}
+
+  </Wrapper::Card>
 
 </form>

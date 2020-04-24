@@ -12,7 +12,7 @@ export default class ElementsController extends Controller {
 
   sortOptions = [
     {
-      label: ` - ${this.lang.get('Choose sort option')} - `,
+      label: ` - ${ this.lang.get('Choose sort option') } - `,
       value: ''
     },
     {

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "totalPages": 13
+    "totalPages": 3
   },
   "data": [
     '{{repeat(10)}}',
@@ -8,10 +8,63 @@
       "type": "elements",
       "id": "{{integer(10,30)}}",
       "attributes": {
-        "active": '{{bool()}}',
+        "isActive": '{{bool()}}',
         "image": 'http://placehold.it/100x100',
         "title": '{{lorem(5, "words")}}',
         "description": '{{lorem(3, "sentences")}}',
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    }
+  ]
+}
+
+// ---------------------------------------------------------
+
+{
+  "meta": {
+    "total": 11,
+    "totalPages": 2,
+    "currentPage": 1,
+    "size": 10
+  },
+  "data": [
+    '{{repeat(11)}}',
+    {
+      "type": "users",
+      "id": "{{integer(20,40)}}",
+      "attributes": {
+        "isActive": '{{bool()}}',
+        "avatar": 'http://placehold.it/100x100',
+        "name": '{{lorem(2, "words")}}',
+        "login": '{{lorem(1, "words")}}',
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      }
+    }
+  ]
+}
+
+
+// ---------------------------------------------------------
+
+
+{
+  "meta": {
+    "total": 7,
+    "totalPages": 1,
+    "currentPage": 1,
+    "size": 10
+  },
+  "data": [
+    '{{repeat(11)}}',
+    {
+      "type": "customers",
+      "id": "{{integer(30,50)}}",
+      "attributes": {
+        "isActive": '{{bool()}}',
+        "name": '{{lorem(2, "words")}}',
+        "login": '{{lorem(1, "words")}}',
         "created": "2015-05-22T14:56:29.000Z",
         "updated": "2015-05-22T14:56:28.000Z"
       }

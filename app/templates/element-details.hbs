@@ -1,37 +1,32 @@
+<Wrapper::Detail @routeBack="elements" @header="Element Details" @backRoute="elements">
 
-<Wrapper::Card @header="Element Details" @mode="details" @backRoute="elements">
+  {{#with @model.data as |element|}}
 
-  <Wrapper::Detail @routeBack="elements">
+    <div class="form-group">
+      <label>Title</label>
+      <div class="form-text text-muted">Title</div>
+      <div class="form-text">{{element.title}}</div>
+    </div>
 
-    {{#with @model.data as |element|}}
+    <div class="form-group">
+      <div class="form-text text-muted">Description</div>
+      <div class="form-text">{{element.description}}</div>
+    </div>
 
-      <div class="form-group">
-        <label>Title</label>
-        <div class="form-text text-muted">Title</div>
-        <div class="form-text">{{element.title}}</div>
-      </div>
+    <div class="form-group">
+      <div class="form-text text-muted">Active</div>
+      <div class="form-text"><Shared::infoYesNo @value={{element.active}} /></div>
+    </div>
 
-      <div class="form-group">
-        <div class="form-text text-muted">Description</div>
-        <div class="form-text">{{element.description}}</div>
-      </div>
+    <div class="form-group">
+      <div class="form-text text-muted">Tags</div>
+      <Shared::TagsList @model={{element.tags}} />
+    </div>
 
-      <div class="form-group">
-        <div class="form-text text-muted">Active</div>
-        <div class="form-text"><Shared::infoYesNo @value={{element.active}} /></div>
-      </div>
+    <div class="form-group">
+      <p><img src={{element.image}} alt="element" /></p>
+    </div>
 
-      <div class="form-group">
-        <div class="form-text text-muted">Tags</div>
-        <Shared::TagsList @model={{element.tags}} />
-      </div>
+  {{/with}}
 
-      <div class="form-group">
-        <p><img src={{element.image}} alt="element" /></p>
-      </div>
-
-    {{/with}}
-
-  </Wrapper::Detail>
-
-</Wrapper::Card>
+</Wrapper::Detail>

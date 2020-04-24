@@ -1,5 +1,5 @@
-{{yield}}
-{{!--
-<LinkTo @route={{@routeBack}}>
-  <Shared::BtnBack />
-</LinkTo> --}}
+<Wrapper::Card @header={{@header}} @mode="details" @backRoute={{@backRoute}}>
+
+  {{yield}}
+
+</Wrapper::Card>

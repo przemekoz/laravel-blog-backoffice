@@ -1,9 +1,8 @@
-import Controller from '@ember/controller';
+import Component from '@glimmer/component';
 import { action } from "@ember/object";
 import { tracked } from '@glimmer/tracking';
 
-export default class ElementEditController extends Controller {
-
+export default class ElementEditFormComponent extends Component {
   @tracked
   listOfTags = [
     {
@@ -50,5 +49,4 @@ export default class ElementEditController extends Controller {
   onRemoveTag(tag) {
     console.log('elementEditController - onRemoveTag', tag)
   }
-
 }
