@@ -1,0 +1,7 @@
+{{#with @model.data as |element|}}
+  <Wrapper::Edit @model={{element}} @modelName="element" @header={{lang "Element Creation"}} @backRoute="element.list" @mode="create">
+
+    <Element::EditForm @model={{element}} />
+
+  </Wrapper::Edit>
+{{/with}}

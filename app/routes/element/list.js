@@ -1,9 +1,8 @@
 import Route from '@ember/routing/route';
-// import { inject as service } from '@ember/service';
+import { inject as service } from '@ember/service';
 
-export default class ElementsRoute extends Route {
-
-  // @service http;
+export default class ElementListRoute extends Route {
+  @service http;
 
   async model() {
     // return this.http.get('/api/v1/elements.json');

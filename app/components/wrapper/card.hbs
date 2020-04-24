@@ -19,7 +19,7 @@
     <div class="float-right">
       {{#if (includes @mode "edit|details|create")}}
       <LinkTo @route={{@backRoute}}>
-        <Shared::BtnBack />
+        <Shared::BtnBack @label={{lang "Back to list"}} />
       </LinkTo>
       {{/if}}
 

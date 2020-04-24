@@ -1,0 +1,40 @@
+<div class="flex-center-container">
+
+  <div class="container">
+    <div class="row pt-4 pb-4 login-container">
+      <div class="col-6">
+        logo
+      </div>
+      <div class="col-6">
+
+        <h2>Sign up</h2>
+
+        <div class="form-group">
+          <label for="login">
+            <i class="fa fas fa-user"></i>
+          </label>
+          <Input id="login" class="form-control input-only-bottom-border" @type="text" size="50"
+            @placeholder={{lang "Your Login"}} />
+        </div>
+
+        <div class="form-group">
+          <label for="password">
+            <i class="fa fas fa-lock"></i>
+          </label>
+          <Input id="password" class="form-control input-only-bottom-border" @type="password" size="50"
+            @placeholder={{lang "Password"}} />
+        </div>
+
+        <div class="form-group">
+          <input id="remember-me" type="checkbox" />
+          <label for="remember-me">{{lang "Remember me"}}</label>
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-primary pt-2 pb-2 pl-5 pr-5">Log in</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,8 +1,7 @@
 import Controller from '@ember/controller';
 import { inject as service } from '@ember/service';
 
-export default class ElementsController extends Controller {
-
+export default class ElementListController extends Controller {
   @service lang;
 
   filterType = {
@@ -12,7 +11,7 @@ export default class ElementsController extends Controller {
 
   sortOptions = [
     {
-      label: ` - ${ this.lang.get('Choose sort option') } - `,
+      label: ` - ${this.lang.get('Choose sort option')} - `,
       value: ''
     },
     {

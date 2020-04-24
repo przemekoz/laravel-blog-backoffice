@@ -23,7 +23,7 @@
     </div>
 
     <div class="col-7 list-column">
-      <LinkTo @route="element-details" @model={{element.id}} data-toggle="tooltip" title="Show details">
+      <LinkTo @route="element.details" @model={{element.id}} data-toggle="tooltip" title="Show details">
         {{element.title}}
       </LinkTo>
       (id: {{element.id}})
@@ -38,7 +38,7 @@
     </div>
 
     <div class="col-3 list-column text-right">
-      <LinkTo @route="element-edit" @model={{element.id}}>
+      <LinkTo @route="element.edit" @model={{element.id}}>
         <Shared::BtnEdit />
       </LinkTo>
       <span {{on "click" (fn this.handleDelete element.id)}}>

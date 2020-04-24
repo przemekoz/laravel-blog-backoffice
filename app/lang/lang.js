@@ -1,7 +1,7 @@
-import { translations as pl } from "./lang_pl";
-import { translations as de  } from "./lang_de";
+import { translationsPL } from "./lang-pl";
+import { translationsDE  } from "./lang-de";
 
 export const LANG = new Map();
-LANG.set("pl", pl);
-LANG.set("de", de);
+LANG.set("pl", translationsPL);
+LANG.set("de", translationsDE);
 
