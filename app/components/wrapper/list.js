@@ -29,6 +29,9 @@ export default class WrapperListComponent extends Component {
   @tracked
   isMoreThanViewElements = false;
 
+  @tracked
+  isProgress = false;
+
   sizeOptions = [
     {
       label: `10 ${this.lang.get('per page')}`,
@@ -96,6 +99,7 @@ export default class WrapperListComponent extends Component {
   }
 
   async refreshData() {
+    this.isProgress = true;
     return this.store.query(this.modelName, {
       page: {
         number: this.page,
@@ -108,6 +112,7 @@ export default class WrapperListComponent extends Component {
         description: 'text'
       }
     }).then(results => {
+      this.isProgress = false;
       this.isMoreThanViewElements = results.length >= 20 && this.size > 10;
       this.data = results;
       this.meta = results.meta;

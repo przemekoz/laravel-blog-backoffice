@@ -38,7 +38,8 @@
     </div>
 
   </div>
-  <div class="card-body">
+  <div class="card-body pt-1">
+    <Shared::ProgressBar class="mb-1" @isProgress={{@isProgress}} />
     {{yield}}
   </div>
 </div>
